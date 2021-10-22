@@ -1,7 +1,7 @@
 const login_details = {
     "Alex" : {
         "password" : "pass",
-        "books" : ["book1", "book2"],
+        "books" : [{"name" : "book1","url": 'http://www.africau.edu/images/default/sample.pdf'}, {"name" : "book2","url": 'http://samples.leanpub.com/thereactnativebook-sample.pdf'}],
     },
 }
 

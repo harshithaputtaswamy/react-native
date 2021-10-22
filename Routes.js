@@ -1,6 +1,8 @@
 import React from 'react';
 import LoginPage from './components/LoginPage';
 import UserBooks from './components/UserBooks';
+import ReadBook from './components/ReadBook';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -18,6 +20,12 @@ export const routes = [
         initial: false,
         component: UserBooks,
         title: 'Books',
+    },
+    {
+        name: 'ReadBook',
+        initial: false,
+        component: ReadBook,
+        title: 'Read',
     },
 ]
 

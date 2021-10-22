@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import login_details from '../assets/login_details'
 
 const styles = StyleSheet.create({
@@ -20,7 +20,13 @@ const UserBooks = ({ navigation, route }) => {
             <Text style={styles.textStyle}>The books in {route.params.name}'s profile are</Text>
             {
                 userBooks.map((book, idx) => {
-                    return <Text style={styles.textStyle} key={idx}>{book}</Text>
+                    console.log(book)
+                    return (
+                        <View>
+                            <Text style={styles.textStyle} key={idx}>{book.name}</Text>
+                            <Button onPress={() => {navigation.navigate('ReadBook', {'url': book.url})}} key={idx+'btn'} title='Open' />
+                        </View>
+                    )
                 })
             }
         </View>
